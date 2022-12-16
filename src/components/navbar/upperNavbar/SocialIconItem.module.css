@@ -1,0 +1,17 @@
+.brand-icon__svg {
+    display: block;
+    margin: auto;
+    font-size: 1.25rem;
+}
+
+.brand-icon  {
+    opacity: .7;
+    transition: opacity 1.5s transform 1.5s;
+}
+
+.brand-icon:hover,
+.brand-icon:active,
+.brand-icon:focus  {
+    opacity: 1;
+    transform: scale(1.2);
+}

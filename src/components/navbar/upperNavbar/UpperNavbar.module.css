@@ -1,0 +1,12 @@
+.upper-navbar {
+    gap: 1rem;
+}
+
+.navbar-container-end__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
