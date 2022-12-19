@@ -1,6 +1,5 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Navbar } from "react-bulma-components"; 
 import merge from "../../../utils/mergeCssClasses";
 
 import styles from './SocialIconItem.module.css';
@@ -23,9 +22,9 @@ const SocialIconsItem: React.FC<Props> = ({href, backgroundColor, iconProp}) => 
     }
 
     return (
-        <Navbar.Item className={styles['brand-icon']} href={href} style={itemStyle} target='_blank'>
+        <a className={merge(styles['brand-icon'], 'navbar-item')} href={href} style={itemStyle} target='_blank' rel="noreferrer">
             <FontAwesomeIcon className={styles['brand-icon__svg']} icon={iconProp} />
-        </Navbar.Item>
+        </a>
     );
   }
   

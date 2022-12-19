@@ -1,8 +1,7 @@
-import { Navbar } from "react-bulma-components";
 import merge from "../../../utils/mergeCssClasses";
 import Topic from "./Topic";
 
-import styles from './TopicsNavbar.module.css';
+import styles from './Topics.module.css';
 
 interface Props {
     items: string[],
@@ -10,16 +9,16 @@ interface Props {
 
 const TopicsNavbar: React.FC<Props> = ({items}) => {
     return (
-      <Navbar color='light' className={merge(styles['topics-navbar'], 'is-size-5', 'has-text-weight-semibold', 'has-background-grey-lighter')}>
-        <Navbar.Container align='left'>
+      <div className={merge(styles['topics-navbar'], 'navbar', 'is-size-5', 'has-text-weight-semibold', 'has-background-grey-lighter')}>
+        <div className='navbar-start'>
             {
                 items.map(i => {
                     console.log(items.indexOf(i));
                     return (<Topic header={i} key={items.indexOf(i)}></Topic>);
                 })
             }
-        </Navbar.Container>
-      </Navbar>
+        </div>
+      </div>
     );
   }
   

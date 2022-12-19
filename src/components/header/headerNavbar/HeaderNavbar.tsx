@@ -1,4 +1,3 @@
-import { Navbar } from "react-bulma-components";
 import merge from "../../../utils/mergeCssClasses";
 
 import styles from './HeaderNavbar.module.css';
@@ -13,13 +12,13 @@ const HeaderNavbar: React.FC<Props> = ({header}) => {
     };
 
     return (
-      <Navbar className={merge(styles.navbar, 'is-size-1', 'has-text-weight-bold')} color='danger'>
-        <Navbar.Container align='left' style={containerStyle}>
-            <Navbar.Item>
+      <div className={merge('navbar', styles.navbar, 'is-size-1', 'has-text-weight-bold', 'is-danger')} >
+        <div className='navbar-start' style={containerStyle}>
+            <div className='navbar-item'>
                 <div>{header}</div>
-            </Navbar.Item>            
-        </Navbar.Container>
-      </Navbar>
+            </div>            
+        </div>
+      </div>
     );
   }
   
