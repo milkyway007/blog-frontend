@@ -1,17 +1,24 @@
-import { FC } from "react";
+import { FC } from 'react'
 
-const imageStyle = {
-    backgroundColor: 'grey',
+import { select } from '../../../services/topic-image-selector'
+
+import { Topic } from '../../../constants/topicEnum'
+
+interface Props {
+	topic: Topic
 }
 
-const PostImage: FC = () => {
-    return (
-        <div className='media-left column'>
-            <figure className='image is-square'>
-                <img src="" alt="" style={imageStyle} />
-            </figure>    
-        </div>
-    )
+const PostImage: FC<Props> = ({ topic }) => {
+	return (
+		<div className='media-left column'>
+			<figure className='image is-square'>
+				<img
+					src={select(topic)}
+					alt=''
+				/>
+			</figure>
+		</div>
+	)
 }
 
-export default PostImage;
+export default PostImage

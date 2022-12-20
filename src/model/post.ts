@@ -1,6 +1,10 @@
+import { Topic } from '../constants/topicEnum'
+
 export interface Post {
-    id: Number,
-    title: String,
-    message: String,
-    timestamp: Date,
+	id: Number
+	abstract: String
+	title: String
+	article: String
+	timestamp: Date
+	topic: Topic
 }

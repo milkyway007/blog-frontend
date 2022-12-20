@@ -1,0 +1,15 @@
+{
+  "tabWidth": 2,
+  "useTabs": true,
+  "singleQuote": true,
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "jsxSingleQuote": true,
+  "printWidth": 80,
+  "semi": false,
+  "singleAttributePerLine": true,
+  "importOrder": ["^(?!.*(services|model|utils|constants).*)[./].*", "^.*/services/.*$", "^.*/model/.*$", "^.*/utils/.*$", "^.*/constants/.*$", "^[./]"],
+  "importOrderSeparation": true, 
+  "importOrderSortSpecifiers": true 
+}

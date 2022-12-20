@@ -1,17 +1,17 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 interface Props {
-    title: String;
-    message: String;
+	title: String
+	abstract: String
 }
 
-const PostText: FC<Props> = ({title, message}) => {
-    return (
-        <div className='media-content column is-three-quarters'>
-            <div className='title'>{title}</div>
-            <div>{message}</div>
-        </div>
-    )
+const PostText: FC<Props> = ({ title, abstract }) => {
+	return (
+		<div className='media-content column is-three-quarters'>
+			<div className='title'>{title}</div>
+			<div>{abstract}</div>
+		</div>
+	)
 }
 
-export default PostText;
+export default PostText
