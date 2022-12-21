@@ -1,21 +1,19 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { SocialIcon } from '../../../model/social-icon'
+
+import { merge } from '../../../utils/mergeCssClasses'
 
 import styles from './SocialIconItem.module.css'
 
-import merge from '../../../utils/mergeCssClasses'
-
 interface Props {
-	href: string
-	backgroundColor: string
-	iconProp: IconProp
+	socialIcon: SocialIcon
 }
 
-const SocialIconsItem: React.FC<Props> = ({
+const SocialIconsItem: React.FC<Props> = ({ socialIcon: {
 	href,
 	backgroundColor,
 	iconProp,
-}) => {
+}}) => {
 	const itemStyle = {
 		borderRadius: '50%',
 		width: '2.5rem',
@@ -27,17 +25,19 @@ const SocialIconsItem: React.FC<Props> = ({
 	}
 
 	return (
-		<a
-			className={merge(styles['brand-icon'], 'navbar-item')}
-			href={href}
-			style={itemStyle}
-			target='_blank'
-			rel='noreferrer'>
-			<FontAwesomeIcon
-				className={styles['brand-icon__svg']}
-				icon={iconProp}
-			/>
-		</a>
+		<li>
+			<a
+				className={merge(styles['brand-icon'], 'navbar-item')}
+				href={href}
+				style={itemStyle}
+				target='_blank'
+				rel='noreferrer'>
+				<FontAwesomeIcon
+					className={styles['brand-icon__svg']}
+					icon={iconProp}
+				/>
+			</a>
+		</li>
 	)
 }
 

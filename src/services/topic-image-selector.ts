@@ -1,6 +1,6 @@
-import { JsLogo, NodeJsLogo, Undefined } from '../images/images'
+import { Topic } from '../constants/topic-enum'
 
-import { Topic } from '../constants/topicEnum'
+import { JsLogo, NodeJsLogo, Undefined } from '../images/images'
 
 export const select = (topic: Topic): string => {
 	switch (topic) {

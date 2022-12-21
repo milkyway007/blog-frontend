@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { select } from '../../../services/topic-image-selector'
 
-import { Topic } from '../../../constants/topicEnum'
+import { Topic } from '../../../constants/topic-enum'
 
 interface Props {
 	topic: Topic

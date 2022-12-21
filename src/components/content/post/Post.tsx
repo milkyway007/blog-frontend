@@ -1,11 +1,11 @@
 import { FC } from 'react'
 
+import { merge } from '../../../utils/mergeCssClasses'
+
+import { Topic } from '../../../constants/topic-enum'
+
 import PostImage from './PostImage'
 import PostText from './PostText'
-
-import merge from '../../../utils/mergeCssClasses'
-
-import { Topic } from '../../../constants/topicEnum'
 
 interface Props {
 	title: String
@@ -15,7 +15,7 @@ interface Props {
 
 const Post: FC<Props> = ({ title, abstract, topic }) => {
 	return (
-		<div className='box'>
+		<li className='box'>
 			<div className={merge('media', 'columns')}>
 				<PostImage topic={topic} />
 				<PostText
@@ -23,7 +23,7 @@ const Post: FC<Props> = ({ title, abstract, topic }) => {
 					abstract={abstract}
 				/>
 			</div>
-		</div>
+		</li>
 	)
 }
 

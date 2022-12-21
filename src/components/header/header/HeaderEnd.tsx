@@ -1,6 +1,7 @@
-import styles from './HeaderEnd.module.css'
 import PageSearchForm from './PageSearchForm'
 import SocialIcons from './SocialIcons'
+
+import styles from './HeaderEnd.module.css'
 
 const HeaderEnd: React.FC = () => {
 	return (

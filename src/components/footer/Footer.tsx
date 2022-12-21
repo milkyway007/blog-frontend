@@ -1,7 +1,8 @@
-import Copyright from './Copyright'
-import styles from './Footer.module.css'
+import { merge } from '../../utils/mergeCssClasses'
 
-import merge from '../../utils/mergeCssClasses'
+import Copyright from './Copyright'
+
+import styles from './Footer.module.css'
 
 const footerStyle = {
 	padding: '1.5rem',

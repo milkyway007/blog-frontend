@@ -1,5 +1,3 @@
-import merge from '../../../utils/mergeCssClasses'
-
 const containerStyle = {
 	margin: '0',
 }
@@ -15,7 +13,7 @@ interface Props {
 const HeaderStart: React.FC<Props> = ({ header }) => {
 	return (
 		<div
-			className={merge('navbar-start', 'is-size-1', 'has-text-weight-bold')}
+			className='navbar-start is-size-1 has-text-weight-bold'
 			style={containerStyle}>
 			<a
 				className={'navbar-item'}

@@ -1,9 +1,10 @@
-import styles from './Header.module.css'
+import { merge } from '../../../utils/mergeCssClasses'
+
 import HeaderBrand from './HeaderBrand'
 import HeaderEnd from './HeaderEnd'
 import HeaderStart from './HeaderStart'
 
-import merge from '../../../utils/mergeCssClasses'
+import styles from './Header.module.css'
 
 const navbarStyle = {
 	paddingBottom: '3rem',

@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import styles from './PageSearchForm.module.css'
+import { merge } from '../../../utils/mergeCssClasses'
 
-import merge from '../../../utils/mergeCssClasses'
+import styles from './PageSearchForm.module.css'
 
 const inputStyle = {
 	backgroundColor: '#363636',
@@ -24,7 +24,7 @@ const PageSearchForm: React.FC = () => {
 				</div>
 				<div className='control'>
 					<input
-						className={merge('input', 'is-size-6', 'is-small', 'is-dark')}
+						className='input is-size-6 is-small is-dark'
 						style={inputStyle}
 					/>
 				</div>

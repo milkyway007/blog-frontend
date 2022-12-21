@@ -1,7 +1,8 @@
-import { MiaLogo } from '../../../images/images'
-import styles from './HeaderBrand.module.css'
+import { merge } from '../../../utils/mergeCssClasses'
 
-import merge from '../../../utils/mergeCssClasses'
+import { MiaLogo } from '../../../images/images'
+
+import styles from './HeaderBrand.module.css'
 
 const brandStyle = {
 	alignItems: 'center',

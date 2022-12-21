@@ -1,7 +1,8 @@
-import Topic from './Topic'
-import styles from './Topics.module.css'
+import { merge } from '../../../utils/mergeCssClasses'
 
-import merge from '../../../utils/mergeCssClasses'
+import Topic from './Topic'
+
+import styles from './Topics.module.css'
 
 interface Props {
 	items: string[]
