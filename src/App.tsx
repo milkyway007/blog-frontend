@@ -8,17 +8,6 @@ import { Post } from './model/post'
 import { Topic } from './constants/topicEnum'
 
 const App: React.FC = () => {
-	const items = [
-		'.NET',
-		'C#',
-		'CSS',
-		'Docker',
-		'HTML',
-		'Javascript',
-		'NodeJS',
-		'ReactJS',
-		'Typescript',
-	]
 	const header = 'Liidia Laada Blog'
 
 	const posts: Post[] = [
@@ -57,7 +46,7 @@ const App: React.FC = () => {
 	return (
 		<div className='App'>
 			<UpperNavbar header={header} />
-			<TopicsNavbar items={items} />
+			<TopicsNavbar items={Object.values(Topic)} />
 			<PageContent posts={posts}></PageContent>
 			<Footer />
 		</div>

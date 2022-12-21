@@ -1,3 +1,8 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
+import 'bulma/css/bulma.min.css'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
 	faFacebookF,
@@ -6,9 +11,6 @@ import {
 	fab,
 } from '@fortawesome/free-brands-svg-icons'
 import { faMagnifyingGlass, fas } from '@fortawesome/free-solid-svg-icons'
-import 'bulma/css/bulma.min.css'
-import React from 'react'
-import ReactDOM from 'react-dom/client'
 
 import App from './App'
 import './index.css'
