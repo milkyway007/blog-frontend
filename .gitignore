@@ -2,7 +2,8 @@
 
 # public
 /public/**/*.png
-/public/**/*.jp?g
+/public/**/*.jpg
+/public/**/*.jpeg
 /public/**/*.json
 /public/**/*.js
 
