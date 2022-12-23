@@ -13,7 +13,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --open",
+    "start": "webpack-dev-server --config webpack.config.dev.js --open",
     "build": "webpack --config webpack.config.prod.js",
     "eject": "react-scripts eject",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
