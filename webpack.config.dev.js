@@ -1,10 +1,11 @@
 const path = require('path')
+const { merge } = require('webpack-merge')
+const common = require('./webpack.config.common.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+module.exports = merge(common, {
 	mode: 'development',
-	entry: { app: path.join(__dirname, 'src', 'components', 'index.tsx') },
-	devtool: 'inline-source-map',
+	devtool: 'eval-source-map',
 	devServer: {
 		static: { directory: path.join(__dirname, 'public') },
 		devMiddleware: { writeToDisk: true },
@@ -13,28 +14,5 @@ module.exports = {
 		hot: true,
 		open: true
 	},
-	output: {
-		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'public'),
-		clean: true
-	},
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				exclude: '/node_modules/',
-				use: [{ loader: 'babel-loader' }]
-			},
-			{
-				test: /\.(png|jpe?g|gif)$/,
-				use: [{ loader: 'file-loader' }]
-			},
-			{
-				test: /\.css$/i,
-				use: ['style-loader', 'css-loader']
-			}
-		]
-	},
-	resolve: { extensions: ['.ts', '.tsx', '.js'] },
 	plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') })]
-}
+})

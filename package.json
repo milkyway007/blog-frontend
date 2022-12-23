@@ -19,7 +19,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch --config webpack.config.dev.js"
   },
   "eslintConfig": {
     "extends": [

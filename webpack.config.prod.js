@@ -1,20 +1,12 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 
 module.exports = {
 	mode: 'production',
-	entry: './src/index.tsx',
-	output: {
-		filename: 'js/[name.]bundle.[contenthash].js',
-		path: path.resolve(__dirname, 'assets', 'scripts'),
-		publicPath: 'dist'
-	},
-	devtool: 'none',
-	plugins: [new CleanPlugin.CleanWebpackPlugin()],
-	module: {
-		test: /\.tsx?$/u,
-		use: 'ts-loader',
-		exclude: /node_modules/u
-	},
-	resolve: { extensions: ['.tsx', '.ts', '.js'] }
+	devtool: 'source-map',
+	plugins: [
+		new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') }),
+		new CleanPlugin.CleanWebpackPlugin()
+	]
 }
