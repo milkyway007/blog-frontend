@@ -1,0 +1,19 @@
+{
+  "tabWidth": 2,
+  "useTabs": true,
+  "singleQuote": true,
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "jsxSingleQuote": true,
+  "printWidth": 80,
+  "semi": false,
+  "singleAttributePerLine": true,
+  "importOrder": ["^bulma/(.*)$", "^@fortawesome/(.*)$", "^.*/services/.*$", "^.*/model/.*$", "^.*/utils/.*$", "^.*/constants/.*$", "^.*/components/.*$", "^(?!.*(services|model|utils|constants|components|.module.css).*)[./].*", "^[./]", "^(.*).module.css$"],
+  "importOrderSeparation": true, 
+  "importOrderSortSpecifiers": false ,
+  "endOfLine": "crlf",
+  "trailingComma": "none",
+  "arrowParens": "always",
+  "proseWrap": "never"
+}

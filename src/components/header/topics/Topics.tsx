@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { merge } from '../../../utils/mergeCssClasses'
 
 import Topic from './Topic'
@@ -19,12 +21,12 @@ const TopicsNavbar: React.FC<Props> = ({ items }) => {
 				'has-background-grey-lighter'
 			)}>
 			<div className='navbar-start'>
-				{items.map((i) => {
-					console.log(items.indexOf(i))
+				{items.map((item) => {
 					return (
 						<Topic
-							header={i}
-							key={items.indexOf(i)}></Topic>
+							header={item}
+							key={items.indexOf(item)}
+						/>
 					)
 				})}
 			</div>

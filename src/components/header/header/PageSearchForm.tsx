@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { merge } from '../../../utils/mergeCssClasses'
@@ -7,7 +9,7 @@ import styles from './PageSearchForm.module.css'
 const inputStyle = {
 	backgroundColor: '#363636',
 	borderBottomColor: '#555555',
-	color: '#fff',
+	color: '#fff'
 }
 
 const PageSearchForm: React.FC = () => {

@@ -1,10 +1,7 @@
-const containerStyle = {
-	margin: '0',
-}
+import React from 'react'
 
-const linkStyle = {
-	backgroundColor: 'hsl(0, 0%, 21%)',
-}
+const containerStyle = { margin: '0' }
+const linkStyle = { backgroundColor: 'hsl(0, 0%, 21%)' }
 
 interface Props {
 	header: string

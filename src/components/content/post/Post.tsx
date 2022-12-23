@@ -1,16 +1,16 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 import { merge } from '../../../utils/mergeCssClasses'
 
-import { Topic } from '../../../constants/topic-enum'
+import { TopicEnum } from '../../../constants/topic-enum'
 
 import PostImage from './PostImage'
 import PostText from './PostText'
 
 interface Props {
-	title: String
-	abstract: String
-	topic: Topic
+	title: string
+	abstract: string
+	topic: TopicEnum
 }
 
 const Post: FC<Props> = ({ title, abstract, topic }) => {

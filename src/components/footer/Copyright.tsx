@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Copyright: React.FC = () => {
 	return (
 		<div className='content has-text-centered'>

@@ -1,16 +1,13 @@
+import React from 'react'
+
 import { merge } from '../../../utils/mergeCssClasses'
 
 import { MiaLogo } from '../../../images/images'
 
 import styles from './HeaderBrand.module.css'
 
-const brandStyle = {
-	alignItems: 'center',
-}
-
-const miaLogoStyle = {
-	width: '9rem',
-}
+const brandStyle = { alignItems: 'center' }
+const miaLogoStyle = { width: '9rem' }
 
 const HeaderBrand: React.FC = () => {
 	return (

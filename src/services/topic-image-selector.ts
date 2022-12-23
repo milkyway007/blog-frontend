@@ -1,12 +1,12 @@
-import { Topic } from '../constants/topic-enum'
+import { TopicEnum } from '../constants/topic-enum'
 
 import { JsLogo, NodeJsLogo, Undefined } from '../images/images'
 
-export const select = (topic: Topic): string => {
+export const select = (topic: TopicEnum): string => {
 	switch (topic) {
-		case Topic.JS:
+		case TopicEnum.JS:
 			return JsLogo
-		case Topic.NodeJS:
+		case TopicEnum.NodeJS:
 			return NodeJsLogo
 		default:
 			return Undefined

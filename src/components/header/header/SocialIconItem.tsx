@@ -1,4 +1,7 @@
+import React from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { SocialIcon } from '../../../model/social-icon'
 
 import { merge } from '../../../utils/mergeCssClasses'
@@ -6,39 +9,39 @@ import { merge } from '../../../utils/mergeCssClasses'
 import styles from './SocialIconItem.module.css'
 
 interface Props {
-	socialIcon: SocialIcon
+	socialIcon: SocialIcon | undefined
 }
 
-const SocialIconsItem: React.FC<Props> = ({ socialIcon: {
-	href,
-	backgroundColor,
-	iconProp,
-}}) => {
-	const itemStyle = {
-		borderRadius: '50%',
-		width: '2.5rem',
-		height: '2.5rem',
-		padding: '0',
-		margin: '.5rem',
-		color: '#fff',
-		backgroundColor: backgroundColor,
-	}
+const SocialIconsItem: React.FC<Props> = ({ socialIcon }) => {
+	let linkEl
 
-	return (
-		<li>
+	if (socialIcon) {
+		const linkStyle = {
+			borderRadius: '50%',
+			width: '2.5rem',
+			height: '2.5rem',
+			padding: '0',
+			margin: '.5rem',
+			color: '#fff',
+			backgroundColor: socialIcon.backgroundColor
+		}
+
+		linkEl = (
 			<a
 				className={merge(styles['brand-icon'], 'navbar-item')}
-				href={href}
-				style={itemStyle}
+				href={socialIcon.href}
+				style={linkStyle}
 				target='_blank'
 				rel='noreferrer'>
 				<FontAwesomeIcon
 					className={styles['brand-icon__svg']}
-					icon={iconProp}
+					icon={socialIcon.iconProp}
 				/>
 			</a>
-		</li>
-	)
+		)
+	}
+
+	return <li>{linkEl}</li>
 }
 
 export default SocialIconsItem

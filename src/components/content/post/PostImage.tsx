@@ -1,11 +1,11 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 import { select } from '../../../services/topic-image-selector'
 
-import { Topic } from '../../../constants/topic-enum'
+import { TopicEnum } from '../../../constants/topic-enum'
 
 interface Props {
-	topic: Topic
+	topic: TopicEnum
 }
 
 const PostImage: FC<Props> = ({ topic }) => {

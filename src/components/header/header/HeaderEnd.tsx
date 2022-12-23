@@ -1,3 +1,5 @@
+import React from 'react'
+
 import PageSearchForm from './PageSearchForm'
 import SocialIcons from './SocialIcons'
 

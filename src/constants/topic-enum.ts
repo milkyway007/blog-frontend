@@ -1,4 +1,4 @@
-export enum Topic {
+export enum TopicEnum {
 	DotNet = '.NET',
 	CSharp = 'C#',
 	CSS = 'CSS',
@@ -7,5 +7,5 @@ export enum Topic {
 	JS = 'Javascript',
 	NodeJS = 'NodeJS',
 	ReactJS = 'ReactJS',
-	TS = 'Typescript',
+	TS = 'Typescript'
 }

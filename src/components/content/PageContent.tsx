@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 import { Post } from '../../model/post'
 
@@ -15,16 +15,16 @@ interface Props {
 const PageContent: FC<Props> = ({ posts }) => {
 	return (
 		<div className={merge('columns', styles.columns)}>
-			<div className='column'></div>
+			<div className='column' />
 			<div className='column is-two-thirds'>
 				<ul className='column is-three-quarters'>
-					{posts.map((p) => {
+					{posts.map((post) => {
 						return (
 							<PostComponent
-								key={p.id.toString()}
-								title={p.title}
-								abstract={p.abstract}
-								topic={p.topic}
+								key={post.id.toString()}
+								title={post.title}
+								abstract={post.abstract}
+								topic={post.topic}
 							/>
 						)
 					})}

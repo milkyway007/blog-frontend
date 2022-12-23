@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 interface Props {
-	title: String
-	abstract: String
+	title: string
+	abstract: string
 }
 
 const PostText: FC<Props> = ({ title, abstract }) => {
