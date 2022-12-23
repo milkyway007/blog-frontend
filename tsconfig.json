@@ -29,7 +29,8 @@
     "src",
     "types", 
     "webpack.config.dev.js",
-    "webpack.config.prod.js"
+    "webpack.config.prod.js",
+    ".babelrc"
   ],
   "exclude": [
     "node_modules"
