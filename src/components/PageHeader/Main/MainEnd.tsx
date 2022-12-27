@@ -3,9 +3,9 @@ import React from 'react'
 import PageSearchForm from './PageSearchForm'
 import SocialIcons from './SocialIcons'
 
-import styles from './HeaderEnd.module.css'
+import styles from './MainEnd.module.css'
 
-const HeaderEnd: React.FC = () => {
+const MainEnd: React.FC = () => {
 	return (
 		<div className='navbar-end'>
 			<div className={styles['header-end__content']}>
@@ -16,4 +16,4 @@ const HeaderEnd: React.FC = () => {
 	)
 }
 
-export default HeaderEnd
+export default MainEnd

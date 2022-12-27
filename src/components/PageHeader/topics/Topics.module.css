@@ -1,4 +1,6 @@
 .topics-navbar {
+    flex-grow: 0;
+    flex-shrink: 0;
     padding-left: 17rem;
     padding-right: 17rem;
 }

@@ -1,13 +1,15 @@
 import React from 'react'
 
 import { Post } from '../model/post'
+import { TopicLink } from '../model/topic-link'
 
 import { TopicEnum } from '../constants/topic-enum'
 
-import PageContent from './content/PageContent'
-import Footer from './footer/Footer'
-import UpperNavbar from './header/header/Header'
-import TopicsNavbar from './header/topics/Topics'
+import PageBody from './PageBody/PageBody'
+import PageFooter from './PageFooter/PageFooter'
+import PageHeader from './PageHeader/PageHeader'
+
+import styles from './App.module.css'
 
 const HEADER = 'Liidia Laada Blog'
 const DUMMY_POSTS: Post[] = [
@@ -42,14 +44,26 @@ const DUMMY_POSTS: Post[] = [
 		topic: TopicEnum.JS
 	}
 ]
+const TOPICS: TopicLink[] = []
 
 const App: React.FC = () => {
+	let id = 0
+
+	for (const [key, value] of Object.entries(TopicEnum)) {
+		TOPICS.push({
+			id: ++id,
+			topic: value,
+			link: `/${key}`
+		} as TopicLink)
+	}
+
 	return (
-		<div className='App'>
-			<UpperNavbar header={HEADER} />
-			<TopicsNavbar items={Object.values(TopicEnum)} />
-			<PageContent posts={DUMMY_POSTS} />
-			<Footer />
+		<div className={styles.App}>
+			<PageHeader
+				header={HEADER}
+				topics={TOPICS}></PageHeader>
+			<PageBody posts={DUMMY_POSTS} />
+			<PageFooter />
 		</div>
 	)
 }

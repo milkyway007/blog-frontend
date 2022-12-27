@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 
 import 'bulma/css/bulma.min.css'
 
@@ -12,11 +13,9 @@ import {
 import { faMagnifyingGlass, fas } from '@fortawesome/free-solid-svg-icons'
 
 import App from './App'
-import './index.css'
-import ReactDOM from 'react-dom'
+
+import './index.module.css'
 
 library.add(fab, fas, faFacebookF, faGithub, faLinkedinIn, faMagnifyingGlass)
 
-ReactDOM.render(
-	<App />,
-	document.getElementById('root'))
+ReactDOM.render(<App />, document.querySelector('body'))

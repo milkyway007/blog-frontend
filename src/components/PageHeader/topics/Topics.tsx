@@ -1,13 +1,17 @@
 import React from 'react'
 
+import { TopicLink } from '../../../model/topic-link'
+
 import { merge } from '../../../utils/mergeCssClasses'
+
+import { TopicEnum } from '../../../constants/topic-enum'
 
 import Topic from './Topic'
 
 import styles from './Topics.module.css'
 
 interface Props {
-	items: string[]
+	items: TopicLink[]
 }
 
 const TopicsNavbar: React.FC<Props> = ({ items }) => {
@@ -22,9 +26,12 @@ const TopicsNavbar: React.FC<Props> = ({ items }) => {
 			)}>
 			<div className='navbar-start'>
 				{items.map((item) => {
+					console.log(item)
+
 					return (
 						<Topic
-							header={item}
+							title={item.topic}
+							href={item.link}
 							key={items.indexOf(item)}
 						/>
 					)

@@ -7,7 +7,7 @@ interface Props {
 	header: string
 }
 
-const HeaderStart: React.FC<Props> = ({ header }) => {
+const MainStart: React.FC<Props> = ({ header }) => {
 	return (
 		<div
 			className='navbar-start is-size-1 has-text-weight-bold'
@@ -22,4 +22,4 @@ const HeaderStart: React.FC<Props> = ({ header }) => {
 	)
 }
 
-export default HeaderStart
+export default MainStart

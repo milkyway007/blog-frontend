@@ -4,12 +4,12 @@ import { merge } from '../../../utils/mergeCssClasses'
 
 import { MiaLogo } from '../../../images/images'
 
-import styles from './HeaderBrand.module.css'
+import styles from './MainBrand.module.css'
 
 const brandStyle = { alignItems: 'center' }
 const miaLogoStyle = { width: '9rem' }
 
-const HeaderBrand: React.FC = () => {
+const MainBrand: React.FC = () => {
 	return (
 		<div
 			className={merge(styles['header-brand'], 'navbar-brand')}
@@ -31,4 +31,4 @@ const HeaderBrand: React.FC = () => {
 	)
 }
 
-export default HeaderBrand
+export default MainBrand
