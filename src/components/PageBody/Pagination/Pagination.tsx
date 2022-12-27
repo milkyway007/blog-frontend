@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 const Pagination: FC = () => {
 	return (
-		<nav className='pagination' >
+		<nav className='pagination my-6' >
 			<a className='pagination-previous'>Previous</a>
 			<a className='pagination-next'>Next page</a>
 			<ul className='pagination-list'>

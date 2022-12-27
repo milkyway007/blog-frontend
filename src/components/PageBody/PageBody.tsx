@@ -30,8 +30,8 @@ const PageContent: FC<Props> = ({ posts }) => {
 			<div className='column' />
 			<div className='columns column is-two-thirds'>
 				<div className='column is-three-quarters'>
-					<Pagination />
 					{postsEl}
+					<Pagination />
 				</div>
 				<div id='right-side-bar' className='column'>
 					<YearFilter />
