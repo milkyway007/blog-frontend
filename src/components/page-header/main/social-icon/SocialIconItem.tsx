@@ -2,9 +2,9 @@ import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { SocialIcon } from '../../../model/social-icon'
+import { SocialIcon } from '../../../../model/social-icon'
 
-import { merge } from '../../../utils/mergeCssClasses'
+import { merge } from '../../../../utils/mergeCssClasses'
 
 import styles from './SocialIconItem.module.css'
 

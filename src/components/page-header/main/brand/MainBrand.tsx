@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { merge } from '../../../utils/mergeCssClasses'
+import { merge } from '../../../../utils/mergeCssClasses'
 
-import { MiaLogo } from '../../../images/images'
+import { MiaLogo } from '../../../../images/images'
 
 import styles from './MainBrand.module.css'
 

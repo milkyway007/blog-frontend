@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { merge } from '../../../utils/mergeCssClasses'
+import { merge } from '../../../../utils/mergeCssClasses'
 
-import MainBrand from './MainBrand'
-import MainEnd from './MainEnd'
-import MainStart from './MainStart'
+import MainBrand from '../brand/MainBrand'
+import MainEnd from '../end/MainEnd'
+import MainStart from '../start/MainStart'
 
 import styles from './Main.module.css'
 

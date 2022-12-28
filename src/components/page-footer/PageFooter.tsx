@@ -2,7 +2,7 @@ import React from 'react'
 
 import { merge } from '../../utils/mergeCssClasses'
 
-import Copyright from './Copyright'
+import Copyright from './copyright/Copyright'
 
 import styles from './PageFooter.module.css'
 

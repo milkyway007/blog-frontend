@@ -9,9 +9,16 @@ interface Props {
 }
 
 const Posts: FC<Props> = ({ posts }) => {
+	if (!Array.isArray(posts) || !posts.length) {
+		return (
+			<div className='box'>
+				<div className='title  mx-6'>No posts found</div>
+			</div>
+		)
+	}
+
 	return (
 		<ul>
-
 			{posts.map((post) => {
 				return (
 					<PostComponent
@@ -22,9 +29,7 @@ const Posts: FC<Props> = ({ posts }) => {
 					/>
 				)
 			})}
-
 		</ul>
-
 	)
 }
 

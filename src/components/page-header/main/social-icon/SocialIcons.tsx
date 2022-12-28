@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { select } from '../../../services/social-icon-selector'
+import { select } from '../../../../services/social-icon-selector'
 
-import { SocialIconType } from '../../../constants/social-icon-type-enum'
+import { SocialIconType } from '../../../../constants/social-icon-type-enum'
 
 import SocialIconItem from './SocialIconItem'
 

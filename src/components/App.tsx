@@ -5,9 +5,9 @@ import { TopicLink } from '../model/topic-link'
 
 import { TopicEnum } from '../constants/topic-enum'
 
-import PageBody from './PageBody/PageBody'
-import PageFooter from './PageFooter/PageFooter'
-import PageHeader from './PageHeader/PageHeader'
+import PageBody from './page-body/PageBody'
+import PageFooter from './page-footer/PageFooter'
+import PageHeader from './page-header/PageHeader'
 
 import styles from './App.module.css'
 

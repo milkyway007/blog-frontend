@@ -1,7 +1,7 @@
 import React from 'react'
 
-import PageSearchForm from './PageSearchForm'
-import SocialIcons from './SocialIcons'
+import PageSearchForm from '../search-form/PageSearchForm'
+import SocialIcons from '../social-icon/SocialIcons'
 
 import styles from './MainEnd.module.css'
 

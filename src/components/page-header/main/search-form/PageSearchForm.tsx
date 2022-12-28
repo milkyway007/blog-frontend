@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { merge } from '../../../utils/mergeCssClasses'
+import { merge } from '../../../../utils/mergeCssClasses'
 
 import styles from './PageSearchForm.module.css'
 
