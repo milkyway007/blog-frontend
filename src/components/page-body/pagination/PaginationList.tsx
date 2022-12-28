@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import PaginationLink from './PaginationLink'
+import PaginationListButton from './PaginationListButton'
 
 interface Props {
 	currentPage: number;
@@ -18,7 +18,7 @@ const PaginationList: FC<Props> = ({
 		for (let index = 1; index <= pageCount; index++) {
 			console.log(index)
 			links.push(
-				<PaginationLink
+				<PaginationListButton
 					key={index}
 					page={index}
 					isCurrent={index === currentPage}

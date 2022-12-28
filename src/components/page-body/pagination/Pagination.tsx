@@ -19,8 +19,8 @@ const Pagination: FC<Props> = ({
 }) => {
 	return (
 		<nav className='pagination my-6'>
-			<PaginationButton title='Previous' isDisabled={currentPage === 1} handlePage={handlePreviousPage}/>
-			<PaginationButton title='Next page' isDisabled={currentPage === pageCount} handlePage={handleNextPage}/>
+			<PaginationButton title='Previous' className={'pagination-previous'} isDisabled={currentPage === 1} handlePage={handlePreviousPage}/>
+			<PaginationButton title='Next page' className={'pagination-next'} isDisabled={currentPage === pageCount} handlePage={handleNextPage}/>
 			<PaginationList
 				currentPage={currentPage}
 				pageCount={pageCount}

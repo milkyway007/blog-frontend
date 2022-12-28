@@ -2,18 +2,20 @@ import React, { FC } from 'react'
 
 interface Props {
     title: string;
+    className: string;
 	isDisabled: boolean;
 	handlePage: () => void;
 }
 
 const PaginationButton: FC<Props> = ({
 	title,
+	className,
 	isDisabled,
 	handlePage
 }) => {
 	return (
 		<button
-			className='pagination-previous'
+			className={className}
 			onClick={() => {
 				return handlePage()
 			}}

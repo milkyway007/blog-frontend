@@ -10,6 +10,7 @@ import YearFilter from './right-side-bar/year-filter/YearFilter'
 
 import styles from './PageBody.module.css'
 import { takePagePosts } from '../../services/pager'
+import { getYearsToFilter } from '../../utils/getYearsToFilter'
 
 interface Props {
 	posts: Post[],
@@ -18,6 +19,7 @@ interface Props {
 
 const PageContent: FC<Props> = ({ posts, pageCount }) => {
 	const [page, setPage] = useState(1)
+	const [yearsToFilterBy, setYearsToFilterBy] = useState(getYearsToFilter())
 
 	const previousPageHandler = () => {
 		setPage((previousState) => {
