@@ -4,8 +4,6 @@ import { TopicLink } from '../../../model/topic-link'
 
 import { merge } from '../../../utils/mergeCssClasses'
 
-import { TopicEnum } from '../../../constants/topic-enum'
-
 import Topic from './Topic'
 
 import styles from './Topics.module.css'
@@ -26,8 +24,6 @@ const TopicsNavbar: React.FC<Props> = ({ items }) => {
 			)}>
 			<div className='navbar-start'>
 				{items.map((item) => {
-					console.log(item)
-
 					return (
 						<Topic
 							title={item.topic}

@@ -6,8 +6,6 @@ interface Props {
 }
 
 const Topic: React.FC<Props> = ({ title, href }) => {
-	console.log(title)
-
 	return (
 		<a
 			className='navbar-item'

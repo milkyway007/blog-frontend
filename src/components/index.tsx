@@ -13,9 +13,12 @@ import {
 import { faMagnifyingGlass, fas } from '@fortawesome/free-solid-svg-icons'
 
 import App from './App'
-
-import './index.module.css'
+import styles from './index.module.css'
 
 library.add(fab, fas, faFacebookF, faGithub, faLinkedinIn, faMagnifyingGlass)
 
-ReactDOM.render(<App />, document.querySelector('body'))
+const root = document.querySelector('#root') as HTMLElement
+
+root.classList.add(styles.root)
+
+ReactDOM.render(<App />, root)

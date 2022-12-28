@@ -10,6 +10,7 @@ import PageFooter from './page-footer/PageFooter'
 import PageHeader from './page-header/PageHeader'
 
 import styles from './App.module.css'
+import { numPages } from '../services/pager'
 
 const HEADER = 'Liidia Laada Blog'
 const DUMMY_POSTS: Post[] = [
@@ -45,6 +46,7 @@ const DUMMY_POSTS: Post[] = [
 	}
 ]
 const TOPICS: TopicLink[] = []
+const pageCount = numPages(DUMMY_POSTS.length)
 
 const App: React.FC = () => {
 	let id = 0
@@ -62,7 +64,7 @@ const App: React.FC = () => {
 			<PageHeader
 				header={HEADER}
 				topics={TOPICS}></PageHeader>
-			<PageBody posts={DUMMY_POSTS} />
+			<PageBody posts={DUMMY_POSTS} pageCount={pageCount} />
 			<PageFooter />
 		</div>
 	)

@@ -1,21 +1,30 @@
 import React, { FC } from 'react'
+import PaginationButton from './PaginationButton';
+import PaginationList from './PaginationList'
 
-const Pagination: FC = () => {
+interface Props {
+	currentPage: number;
+	pageCount: number;
+	handleNextPage: () => void;
+	handlePreviousPage: () => void;
+	handleSpecificPage: (page: number) => void;
+}
+
+const Pagination: FC<Props> = ({
+	currentPage,
+	pageCount,
+	handleNextPage,
+	handlePreviousPage,
+	handleSpecificPage
+}) => {
 	return (
 		<nav className='pagination my-6'>
-			<a className='pagination-previous'>Previous</a>
-			<a className='pagination-next'>Next page</a>
-			<ul className='pagination-list'>
-				<li>
-					<a className='pagination-link  is-current'>1</a>
-				</li>
-				<li>
-					<a className='pagination-link'>2</a>
-				</li>
-				<li>
-					<a className='pagination-link'>3</a>
-				</li>
-			</ul>
+			<PaginationButton title='Previous' isDisabled={currentPage === 1} handlePage={handlePreviousPage}/>
+			<PaginationButton title='Next page' isDisabled={currentPage === pageCount} handlePage={handleNextPage}/>
+			<PaginationList
+				currentPage={currentPage}
+				pageCount={pageCount}
+				handleSpecificPage={handleSpecificPage} />
 		</nav>
 	)
 }
