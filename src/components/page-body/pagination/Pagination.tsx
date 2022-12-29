@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import PaginationButton from './PaginationButton';
+import PaginationButton from './PaginationButton'
 import PaginationList from './PaginationList'
 
 interface Props {

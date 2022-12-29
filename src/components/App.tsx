@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Post } from '../model/post'
 import { TopicLink } from '../model/topic-link'
@@ -10,7 +10,8 @@ import PageFooter from './page-footer/PageFooter'
 import PageHeader from './page-header/PageHeader'
 
 import styles from './App.module.css'
-import { numPages } from '../services/pager'
+
+import '../utils/num-extensions'
 
 const HEADER = 'Liidia Laada Blog'
 const DUMMY_POSTS: Post[] = [
@@ -41,12 +42,11 @@ const DUMMY_POSTS: Post[] = [
 			"I've been writing a bunch of jest tests recently for libraries that use the underlying window.crypto methods like getRandomValues() and window.crypto.subtle key management methods. One problem I run into is that the window.crypto object isn't available, so I need to shim it.To use the window.crypto...",
 		article:
 			"One of the ideological sticking points of the first JavaScript framework was was extending prototypes vs. wrapping functions. Frameworks like MooTools and Prototype extended prototypes while jQuery and other smaller frameworks did not. Each had their benefits, but ultimately all these years later I still believe that the ability to extend native prototypes is a massive feature of JavaScript. Let's check out how easy it is to empower every instance of a primitive by extending prototypes! Every JavaScript native, like Number, String, Array, Object, etc. has a prototype. Every method on a prototype is inherited by every instance of that object. For example, we can provide every `Array instance with a unique method by extending its prototype: Note that if you can also ensure chaining capability by returning this: The biggest criticism of extending prototypes has always been name collision where the eventual specification implementation is different than the framework implementation. While I understand that argument, you can combat it with prefixing function names. Adding super powers to a native prototype so that every instance has it is so useful that I'd never tell someone not to extend a prototype. #MooToolsFTW.",
-		timestamp: new Date('2023-12-19'),
+		timestamp: new Date('2021-12-19'),
 		topic: TopicEnum.JS
 	}
 ]
 const TOPICS: TopicLink[] = []
-const pageCount = numPages(DUMMY_POSTS.length)
 
 const App: React.FC = () => {
 	let id = 0
@@ -64,7 +64,7 @@ const App: React.FC = () => {
 			<PageHeader
 				header={HEADER}
 				topics={TOPICS}></PageHeader>
-			<PageBody posts={DUMMY_POSTS} pageCount={pageCount} />
+			<PageBody posts={DUMMY_POSTS} />
 			<PageFooter />
 		</div>
 	)

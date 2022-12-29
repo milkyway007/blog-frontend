@@ -1,9 +1,3 @@
 .year-filter {
-    gap: .5rem 1rem;
-}
-
-.year-filter__checkbox {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
+    gap: 0 .25rem
 }
