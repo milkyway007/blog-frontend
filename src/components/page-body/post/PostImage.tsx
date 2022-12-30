@@ -5,7 +5,7 @@ import { select } from '../../../services/topic-image-selector'
 import { TopicEnum } from '../../../constants/topic-enum'
 
 interface Props {
-	topic: TopicEnum
+	topic: TopicEnum | undefined
 }
 
 const PostImage: FC<Props> = ({ topic }) => {

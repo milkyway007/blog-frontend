@@ -10,10 +10,14 @@ import PostText from './PostText'
 interface Props {
 	title: string
 	abstract: string
-	topic: TopicEnum
+	topic: TopicEnum | undefined
 }
 
 const Post: FC<Props> = ({ title, abstract, topic }) => {
+	console.log(title)
+	console.log(abstract)
+	console.log(topic)
+
 	return (
 		<li className='box'>
 			<div className={merge('media', 'columns')}>

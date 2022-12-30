@@ -14,6 +14,7 @@ import { faMagnifyingGlass, fas } from '@fortawesome/free-solid-svg-icons'
 
 import App from './App'
 import styles from './index.module.css'
+import { store, StoreContext } from '../stores/store'
 
 library.add(fab, fas, faFacebookF, faGithub, faLinkedinIn, faMagnifyingGlass)
 
@@ -21,4 +22,9 @@ const root = document.querySelector('#root') as HTMLElement
 
 root.classList.add(styles.root)
 
-ReactDOM.render(<App />, root)
+ReactDOM.render(
+	<StoreContext.Provider value={store}>
+		<App />
+	</StoreContext.Provider>,
+	root
+)

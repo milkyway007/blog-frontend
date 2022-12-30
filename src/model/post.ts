@@ -1,10 +1,11 @@
 import { TopicEnum } from '../constants/topic-enum'
 
 export interface Post {
-	id: number
+	id: string
 	abstract: string
 	title: string
 	article: string
-	timestamp: Date
-	topic: TopicEnum
+	topic: number
+	created: string
+	modified: string
 }

@@ -4,24 +4,9 @@ import styles from './YearCheckbox.module.css'
 
 interface Props {
     year: number;
-	add: (year: number) => void
-	remove: (year: number) => void
 }
 
-const YearCheckbox: FC<Props> = ({ year, add, remove }) => {
-	const isYearCheckedHandler =
-	(event: ChangeEvent<HTMLInputElement>) => {
-		event.persist()
-
-		if (!event.target.checked) {
-			remove(year)
-
-			return
-		}
-
-		add(year)
-	}
-
+const YearLink: FC<Props> = ({ year }) => {
 	return (
 		<a href={`/${year}`} className='button is-warning is-light is-normal py-1 px-2'>
 			{year}
@@ -29,4 +14,4 @@ const YearCheckbox: FC<Props> = ({ year, add, remove }) => {
 	)
 }
 
-export default YearCheckbox
+export default YearLink

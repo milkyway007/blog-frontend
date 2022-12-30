@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { numToTopic, TopicEnum } from '../../../constants/topic-enum'
 
 import { Post } from '../../../model/post'
 
@@ -9,6 +10,10 @@ interface Props {
 }
 
 const Posts: FC<Props> = ({ posts }) => {
+	console.log(posts)
+	console.log(posts.length)
+	console.log(posts[0])
+
 	if (!Array.isArray(posts) || !posts.length) {
 		return (
 			<div className='box'>
@@ -25,7 +30,7 @@ const Posts: FC<Props> = ({ posts }) => {
 						key={post.id.toString()}
 						title={post.title}
 						abstract={post.abstract}
-						topic={post.topic}
+						topic={numToTopic(post.topic)}
 					/>
 				)
 			})}

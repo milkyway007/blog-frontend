@@ -7,11 +7,9 @@ import styles from './YearFilter.module.css'
 
 interface Props {
 	years: number[]
-	add: (year: number) => void
-	remove: (year: number) => void
 }
 
-const YearFilter: FC<Props> = ({ years, add, remove }) => {
+const YearFilter: FC<Props> = ({ years }) => {
 	return (
 		<ul
 			className={merge(
@@ -22,9 +20,7 @@ const YearFilter: FC<Props> = ({ years, add, remove }) => {
 				return (
 					<li key={year}>
 						<YearCheckbox
-							year={year}
-							add={add}
-							remove={remove} />
+							year={year} />
 					</li>
 				)
 			})}

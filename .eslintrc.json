@@ -230,7 +230,7 @@
             }],
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
-        "prefer-destructuring": "error",
+        "prefer-destructuring": "warn",
         // "prefer-exponentiation-operator": "error",
         "prefer-named-capture-group": 0,
         "prefer-numeric-literals": "error",
@@ -246,7 +246,7 @@
         "radix": "error",
         "require-atomic-updates": "error",
         "require-await": "error",
-        "require-jsdoc": "error",
+        "require-jsdoc": "warn",
         "require-unicode-regexp": 0,
         "rest-spread-spacing": "error",
         "semi": ["warn", "never"],
@@ -282,6 +282,7 @@
         "no-mixed-spaces-and-tabs": "error",
         "no-unexpected-multiline": "error",
         "@typescript-eslint/no-var-requires": 0,
-        "@typescript-eslint/no-non-null-assertion": 0
+        "@typescript-eslint/no-non-null-assertion": 0,
+        "@typescript-eslint/ban-types": "warn"
     }
 }

@@ -8,7 +8,7 @@ module.exports = merge(common, {
 	devServer: {
 		static: { directory: path.join(__dirname, 'public') },
 		devMiddleware: { writeToDisk: true },
-		port: 5000,
+		port: 3000,
 		client: { logging: 'verbose' },
 		hot: true,
 		open: true
