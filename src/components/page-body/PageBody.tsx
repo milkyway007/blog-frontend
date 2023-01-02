@@ -1,11 +1,11 @@
 import React, { FC, useState } from 'react'
 
-import { Post } from '../../model/post'
+import { Post } from '../../app/model/post'
 
-import '../../utils/array-extensions'
-import { getYearsToFilter } from '../../utils/getYearsToFilter'
-import { merge } from '../../utils/mergeCssClasses'
-import '../../utils/num-extensions.ts'
+import '../../app/utils/array-extensions'
+import '../../app/utils/num-extensions.ts'
+import { getYears } from '../../app/utils/getYearsToFilter'
+import { merge } from '../../app/utils/mergeCssClasses'
 
 import Pagination from './pagination/Pagination'
 import { default as PostsElement } from './post/Posts'
@@ -18,7 +18,6 @@ interface Props {
 }
 
 const PageContent: FC<Props> = ({ posts }) => {
-	console.log(posts)
 	const [page, setPage] = useState(1)
 
 	const previousPageHandler = () => {
@@ -58,7 +57,7 @@ const PageContent: FC<Props> = ({ posts }) => {
 				<div
 					id='right-side-bar'
 					className='column'>
-					<YearFilter years={getYearsToFilter()} />
+					<YearFilter years={getYears()} />
 				</div>
 			</div>
 			<div className='column'></div>

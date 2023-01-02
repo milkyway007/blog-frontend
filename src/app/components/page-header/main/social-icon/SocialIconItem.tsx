@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -27,9 +28,9 @@ const SocialIconsItem: React.FC<Props> = ({ socialIcon }) => {
 		}
 
 		linkEl = (
-			<a
+			<NavLink
 				className={merge(styles['brand-icon'], 'navbar-item')}
-				href={socialIcon.href}
+				to={socialIcon.href}
 				style={linkStyle}
 				target='_blank'
 				rel='noreferrer'>
@@ -37,7 +38,7 @@ const SocialIconsItem: React.FC<Props> = ({ socialIcon }) => {
 					className={styles['brand-icon__svg']}
 					icon={socialIcon.iconProp}
 				/>
-			</a>
+			</NavLink>
 		)
 	}
 

@@ -1,6 +1,6 @@
 import { YEAR_INIT } from '../constants/constants'
 
-export const getYearsToFilter = () => {
+export const getYears = () => {
 	const current: number = new Date().getFullYear()
 	const yearsToFilter = []
 

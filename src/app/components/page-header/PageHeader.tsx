@@ -2,7 +2,8 @@ import React from 'react'
 
 import { TopicLink } from '../../model/topic-link'
 
-import Header from './main/main/Main'
+import Header from '../../components/page-header/main/main/Main'
+
 import TopicsNavbar from './topics/Topics'
 
 import styles from './PageHeader.module.css'

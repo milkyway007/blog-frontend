@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { NavLink } from 'react-router-dom'
 
 interface Props {
 	year: number
@@ -6,11 +7,11 @@ interface Props {
 
 const YearLink: FC<Props> = ({ year }) => {
 	return (
-		<a
-			href={`/${year}`}
+		<NavLink
+			to={`/${year}`}
 			className='button is-warning is-light is-normal py-1 px-2'>
 			{year}
-		</a>
+		</NavLink>
 	)
 }
 

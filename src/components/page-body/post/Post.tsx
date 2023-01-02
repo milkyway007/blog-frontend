@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 
-import { merge } from '../../../utils/mergeCssClasses'
+import { merge } from '../../../app/utils/mergeCssClasses'
 
-import { TopicEnum } from '../../../constants/topic-enum'
+import { TopicEnum } from '../../../app/constants/topic-enum'
 
 import PostImage from './PostImage'
 import PostText from './PostText'
@@ -14,10 +14,6 @@ interface Props {
 }
 
 const Post: FC<Props> = ({ title, abstract, topic }) => {
-	console.log(title)
-	console.log(abstract)
-	console.log(topic)
-
 	return (
 		<li className='box'>
 			<div className={merge('media', 'columns')}>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const containerStyle = { margin: '0' }
 const linkStyle = { backgroundColor: 'hsl(0, 0%, 21%)' }
@@ -12,12 +13,12 @@ const MainStart: React.FC<Props> = ({ header }) => {
 		<div
 			className='navbar-start is-size-1 has-text-weight-bold'
 			style={containerStyle}>
-			<a
+			<NavLink
 				className={'navbar-item'}
-				href='/'
+				to='/'
 				style={linkStyle}>
 				<div>{header}</div>
-			</a>
+			</NavLink>
 		</div>
 	)
 }

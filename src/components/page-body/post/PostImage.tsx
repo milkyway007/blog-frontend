@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 
-import { select } from '../../../services/topic-image-selector'
+import { select } from '../../../app/services/topic-image-selector'
 
-import { TopicEnum } from '../../../constants/topic-enum'
+import { TopicEnum } from '../../../app/constants/topic-enum'
 
 interface Props {
 	topic: TopicEnum | undefined

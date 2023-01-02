@@ -17,7 +17,6 @@ const PaginationList: FC<Props> = ({
 		const links = []
 
 		for (let index = 1; index <= pageCount; index++) {
-			console.log(index)
 			links.push(
 				<PaginationListButton
 					key={index}

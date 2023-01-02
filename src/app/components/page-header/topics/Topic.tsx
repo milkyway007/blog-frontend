@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 interface Props {
 	title: string
@@ -7,11 +8,11 @@ interface Props {
 
 const Topic: React.FC<Props> = ({ title, href }) => {
 	return (
-		<a
+		<NavLink
 			className='navbar-item'
-			href={href}>
+			to={href}>
 			{title}
-		</a>
+		</NavLink>
 	)
 }
 

@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 
-import { Post } from '../../../model/post'
+import { Post } from '../../../app/model/post'
 
-import { numToTopic } from '../../../constants/topic-enum'
+import { numToTopic } from '../../../app/constants/topic-enum'
 
 import { default as PostComponent } from './Post'
 
@@ -11,10 +11,6 @@ interface Props {
 }
 
 const Posts: FC<Props> = ({ posts }) => {
-	console.log(posts)
-	console.log(posts.length)
-	console.log(posts[0])
-
 	if (!Array.isArray(posts) || !posts.length) {
 		return (
 			<div className='box'>

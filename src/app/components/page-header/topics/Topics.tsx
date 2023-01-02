@@ -13,6 +13,8 @@ interface Props {
 }
 
 const TopicsNavbar: React.FC<Props> = ({ items }) => {
+	console.log(items)
+
 	return (
 		<div
 			className={merge(

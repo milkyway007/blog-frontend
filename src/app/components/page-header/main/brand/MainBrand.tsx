@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import { merge } from '../../../../utils/mergeCssClasses'
 
@@ -14,9 +15,9 @@ const MainBrand: React.FC = () => {
 		<div
 			className={merge(styles['header-brand'], 'navbar-brand')}
 			style={brandStyle}>
-			<a
+			<NavLink
 				className='card'
-				href='/'>
+				to='/'>
 				<div className='card-image'>
 					<figure className='image'>
 						<img
@@ -26,7 +27,7 @@ const MainBrand: React.FC = () => {
 						/>
 					</figure>
 				</div>
-			</a>
+			</NavLink>
 		</div>
 	)
 }
