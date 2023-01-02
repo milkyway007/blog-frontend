@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import 'bulma/css/bulma.min.css'
 
@@ -12,19 +12,20 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faMagnifyingGlass, fas } from '@fortawesome/free-solid-svg-icons'
 
-import App from './App'
-import styles from './index.module.css'
 import { store, StoreContext } from '../stores/store'
+import App from './App'
+
+import styles from './index.module.css'
 
 library.add(fab, fas, faFacebookF, faGithub, faLinkedinIn, faMagnifyingGlass)
 
-const root = document.querySelector('#root') as HTMLElement
+const container = document.querySelector('#root') as HTMLElement
 
-root.classList.add(styles.root)
+container.classList.add(styles.root)
+const root = createRoot(container)
 
-ReactDOM.render(
+root.render(
 	<StoreContext.Provider value={store}>
 		<App />
-	</StoreContext.Provider>,
-	root
+	</StoreContext.Provider>
 )

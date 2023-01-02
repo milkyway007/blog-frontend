@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 
 import { merge } from '../../../../utils/mergeCssClasses'
+
 import YearCheckbox from './YearLink'
 
 import styles from './YearFilter.module.css'
@@ -19,8 +20,7 @@ const YearFilter: FC<Props> = ({ years }) => {
 			{years.map((year) => {
 				return (
 					<li key={year}>
-						<YearCheckbox
-							year={year} />
+						<YearCheckbox year={year} />
 					</li>
 				)
 			})}

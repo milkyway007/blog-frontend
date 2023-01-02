@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 
 interface Props {
-    title: string;
-    className: string;
-	isDisabled: boolean;
-	handlePage: () => void;
+	title: string
+	className: string
+	isDisabled: boolean
+	handlePage: () => void
 }
 
 const PaginationButton: FC<Props> = ({
@@ -19,7 +19,9 @@ const PaginationButton: FC<Props> = ({
 			onClick={() => {
 				return handlePage()
 			}}
-			disabled={isDisabled}>{title}</button>
+			disabled={isDisabled}>
+			{title}
+		</button>
 	)
 }
 

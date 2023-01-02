@@ -1,12 +1,13 @@
 import React, { FC } from 'react'
-import { numToTopic, TopicEnum } from '../../../constants/topic-enum'
 
 import { Post } from '../../../model/post'
+
+import { numToTopic } from '../../../constants/topic-enum'
 
 import { default as PostComponent } from './Post'
 
 interface Props {
-	posts: Post[],
+	posts: Post[]
 }
 
 const Posts: FC<Props> = ({ posts }) => {

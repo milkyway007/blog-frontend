@@ -246,7 +246,7 @@
         "radix": "error",
         "require-atomic-updates": "error",
         "require-await": "error",
-        "require-jsdoc": "warn",
+        "require-jsdoc": 0,
         "require-unicode-regexp": 0,
         "rest-spread-spacing": "error",
         "semi": ["warn", "never"],

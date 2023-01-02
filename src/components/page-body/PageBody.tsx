@@ -2,19 +2,19 @@ import React, { FC, useState } from 'react'
 
 import { Post } from '../../model/post'
 
+import '../../utils/array-extensions'
+import { getYearsToFilter } from '../../utils/getYearsToFilter'
 import { merge } from '../../utils/mergeCssClasses'
+import '../../utils/num-extensions.ts'
 
 import Pagination from './pagination/Pagination'
 import { default as PostsElement } from './post/Posts'
 import YearFilter from './right-side-bar/year-filter/YearFilter'
 
-import '../../utils/array-extensions'
-
 import styles from './PageBody.module.css'
-import { getYearsToFilter } from '../../utils/getYearsToFilter'
 
 interface Props {
-	posts: Post[],
+	posts: Post[]
 }
 
 const PageContent: FC<Props> = ({ posts }) => {
@@ -46,20 +46,19 @@ const PageContent: FC<Props> = ({ posts }) => {
 			<div className='column' />
 			<div className='columns column is-two-thirds'>
 				<div className='column is-three-quarters'>
-					<PostsElement
-						posts={posts} />
+					<PostsElement posts={posts} />
 					<Pagination
 						pageCount={posts.length.pageCount()}
 						currentPage={page}
 						handlePreviousPage={previousPageHandler}
 						handleNextPage={nextPageHandler}
-						handleSpecificPage={specificPageHandler} />
+						handleSpecificPage={specificPageHandler}
+					/>
 				</div>
 				<div
 					id='right-side-bar'
 					className='column'>
-					<YearFilter
-						years={getYearsToFilter()} />
+					<YearFilter years={getYearsToFilter()} />
 				</div>
 			</div>
 			<div className='column'></div>

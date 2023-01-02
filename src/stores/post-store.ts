@@ -1,23 +1,42 @@
-import { action, makeAutoObservable, observable } from 'mobx'
-import agent from '../api/agent'
+import { makeAutoObservable, runInAction } from 'mobx'
+
 import { Post } from '../model/post'
 
-export class PostStore {
+import agent from '../api/agent'
 
-	posts: Post[] = []
+export default class PostStore {
+
+	postRegistry = new Map<string, Post>()
 
 	constructor() {
-		makeAutoObservable(this)
+		makeAutoObservable(this, {}, { autoBind: true })
+	}
+
+	get postsByDate() {
+		return Array.from(this.postRegistry.values()).sort((postA, postB) => {
+			return Date.parse(postA.created) - Date.parse(postB.created)
+		})
 	}
 
 	loadPosts = async() => {
 		try {
 			const posts = await agent.Posts.list()
 
-			posts.forEach((post) => {
-				post.created = post.created.split('T')[0]
-				post.modified = post.modified.split('T')[0]
-				this.posts.push(post)
+			runInAction(() => {
+				posts.forEach((post) => {
+					const {
+						created: createdDateTime,
+						modified: modifiedDateTime
+					} = post
+
+					const [created] = createdDateTime.split('T')
+					const [modified] = modifiedDateTime.split('T')
+
+					post.created = created
+					post.modified = modified
+
+					this.postRegistry.set(post.id, post)
+				})
 			})
 		}
 		catch (error) {

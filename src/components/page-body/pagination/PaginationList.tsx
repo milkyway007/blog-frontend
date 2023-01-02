@@ -1,10 +1,11 @@
 import React, { FC } from 'react'
+
 import PaginationListButton from './PaginationListButton'
 
 interface Props {
-	currentPage: number;
-    pageCount: number;
-	handleSpecificPage: (page: number) => void;
+	currentPage: number
+	pageCount: number
+	handleSpecificPage: (page: number) => void
 }
 
 const PaginationList: FC<Props> = ({
@@ -22,18 +23,15 @@ const PaginationList: FC<Props> = ({
 					key={index}
 					page={index}
 					isCurrent={index === currentPage}
-					handleSpecificPage={handleSpecificPage} />
+					handleSpecificPage={handleSpecificPage}
+				/>
 			)
 		}
 
 		return links
 	}
 
-	return (
-		<ul className='pagination-list'>
-			{createPaginationLinks()}
-		</ul>
-	)
+	return <ul className='pagination-list'>{createPaginationLinks()}</ul>
 }
 
 export default PaginationList

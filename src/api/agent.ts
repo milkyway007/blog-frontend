@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from 'axios'
+
 import { Post } from '../model/post'
 
 const sleep = (delay: number) => {
@@ -11,7 +12,9 @@ axios.defaults.baseURL = 'http://localhost:5000/api/v1'
 
 axios.interceptors.response.use(async(response) => {
 	try {
-		await sleep(1000)
+		const LOADING_TIME = 1000
+
+		await sleep(LOADING_TIME)
 
 		return response
 	}
@@ -22,27 +25,27 @@ axios.interceptors.response.use(async(response) => {
 	}
 })
 
-const responseBody = <T> (response: AxiosResponse<T>) => {
+const responseBody = <T>(response: AxiosResponse<T>) => {
 	return response.data
 }
 
 const requests = {
-	get: async <T> (url: string) => {
+	get: async <T>(url: string) => {
 		const response = await axios.get<T>(url)
 
 		return responseBody(response)
 	},
-	post: async <T> (url: string, body: {}) => {
+	post: async <T>(url: string, body: object) => {
 		const response = await axios.post<T>(url)
 
 		return responseBody(response)
 	},
-	patch: async <T>(url: string, body: {}) => {
+	patch: async <T>(url: string, body: object) => {
 		const response = await axios.patch<T>(url)
 
 		return responseBody(response)
 	},
-	del: async <T> (url: string) => {
+	del: async <T>(url: string) => {
 		const response = await axios.delete<T>(url)
 
 		return responseBody(response)
